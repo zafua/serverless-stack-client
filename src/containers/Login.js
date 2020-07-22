@@ -19,8 +19,6 @@ export default function Login() {
         email: "",
         password: ""
     });
-    // redirect için
-    const history = useHistory();
     // login sırasında butonu loading yapmak için
     const [isLoading, setIsLoading] = useState(false);
 
@@ -36,7 +34,6 @@ export default function Login() {
         try {
             await Auth.signIn(fields.email, fields.password);
             userHasAuthenticated(true);
-            history.push("/");
         } catch (e) {
             onError(e);
         }
