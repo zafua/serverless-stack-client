@@ -62,7 +62,7 @@ export default function Signup() {
     function validateForm(){
         return (
             fields.email.length > 0 && 
-            fields.password > 0 &&
+            fields.password.length > 0 &&
             fields.password === fields.confirmPassword
         );
     }
