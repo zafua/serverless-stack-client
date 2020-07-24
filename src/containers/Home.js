@@ -6,6 +6,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { onError } from '../libs/errorLib';
 import { API } from "aws-amplify";
 import Note from '../components/Note';
+import { Link } from "react-router-dom";
 
 export default function Home() {
     const {isAuthenticated} = useAppContext();
@@ -68,9 +69,12 @@ export default function Home() {
     function renderLander() {
         return (
           <div className="lander">
-            <h1>Uze</h1>
+            <h1>Cotes</h1>
             <p>Cloud based note taking app</p>
-
+            <div>
+              <Link to="login" className="btn btn-info btn-lg">Login</Link>
+              <Link to="login" className="btn btn-success btn-lg">Signup</Link>
+            </div>
           </div>
         );
       }
