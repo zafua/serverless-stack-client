@@ -1,6 +1,5 @@
 import React from 'react';
-import { LinkContainer } from "react-router-bootstrap";
-import { ListGroup, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 export default function Note({note, ...props}){
     return (
